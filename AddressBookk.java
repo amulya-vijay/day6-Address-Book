@@ -1,14 +1,14 @@
 package com.addressbook;
 
-import java.util.List;
 import java.util.Scanner;
 import java.util.ArrayList;
 
+
 class Info{
 	
-	List<String> info = new ArrayList<String>();
+	ArrayList<String> info = new ArrayList<String>();
 	
-	void addressInfo() {
+	ArrayList<String> addressInfo() {
 	
 		@SuppressWarnings("resource")
 		Scanner sc = new Scanner(System.in);
@@ -34,26 +34,30 @@ class Info{
 		System.out.println("Enter the email");
 		String email=sc.nextLine();
 		
-		info.add(firstName);
+	    info.add(firstName);
 		info.add(lastName);
 		info.add(address);
 		info.add(city);
 		info.add(zipCode);
 		info.add(state);
-		info.add(email);
+		info.add(email); 
+		
+		return info;
 		
 	}
 	
 }
 
-public class AddressBook {
+
+public class AddressBookk {
 	
 	public static void main(String[] args) {
 
 		System.out.println("Welcome to Address Book");
-		Info in = new Info();
-		in.addressInfo();
-		System.out.println(in.info);
+		
+		Info in1 = new Info();
+		in1.addressInfo();
+
 		
 	}
 
